@@ -1,0 +1,33 @@
+/* App.css - VERSI FIX TOTAL */
+
+/* Reset dasar untuk html dan body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* background-color ini yang bikin warna ungu/biru di belakang tetap ada */
+  background-color: #3a328d; 
+  overflow-x: hidden; /* Mencegah scroll kanan-kiri yang gak jelas */
+}
+
+/* Membebaskan #root dari batasan lebar */
+#root {
+  width: 100%;
+  max-width: none !important; /* Hapus batas 1280px */
+  margin: 0 !important;        /* Hapus margin otomatis */
+  padding: 0 !important;       /* Hapus padding 2rem yang bikin sempit */
+  text-align: left !important; /* Kembalikan ke kiri agar elemen anak bebas diatur */
+}
+
+/* Pembungkus utama aplikasi di App.jsx */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: block; /* Pastikan tidak flex agar tidak menjepit konten */
+}
+
+/* Tambahan: Pastikan semua elemen menggunakan border-box */
+* {
+  box-sizing: border-box;
+}

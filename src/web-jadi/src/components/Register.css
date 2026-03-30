@@ -1,0 +1,127 @@
+/* components/Register.css */
+
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 20px;
+}
+
+.register-box {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    
+    /* PAKSA LEBAR DI SINI */
+    min-width: 600px !important; /* Gunakan !important agar tidak didepak kode lain */
+    max-width: 90vw;         /* Supaya di HP gak kepotong (90% lebar layar) */
+    margin: 50px auto; /* Memberi jarak atas-bawah dan memposisikan di tengah */
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- BAGIAN JUDUL (SUDAH DIPERBESAR) --- */
+.register-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.register-header h2 {
+    font-size: 60px; /* Ukuran Jelas & Besar */
+    color: #2d3748;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.register-header p {
+    color: #718096;
+    font-size: 50px; /* Lebih besar sedikit */
+    margin-top: 10px;
+}
+
+/* --- BAGIAN FORM --- */
+.register-form .input-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 40px; /* Label lebih mudah dibaca */
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px; /* Box lebih tebal */
+    border: 2px solid #edf2f7;
+    border-radius: 10px;
+    font-size: 40px; /* Tulisan saat ngetik lebih besar */
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* --- TOMBOL DAFTAR --- */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 50px; /* Tombol lebih besar & mantap */
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* --- FOOTER / LINK BALIK --- */
+.register-footer {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #edf2f7;
+    padding-top: 20px;
+}
+
+.register-footer p {
+    font-size: 45px;
+    color: #718096;
+}
+
+.register-footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}

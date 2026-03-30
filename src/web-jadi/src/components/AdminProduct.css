@@ -1,0 +1,413 @@
+/* 1. PERBESAR CONTAINER & WRAPPER */
+.admin-page-container {
+    padding: 30px; /* Ditambah biar nggak terlalu mepet pinggir */
+}
+
+.table-wrapper {
+    padding: 40px; /* Ruang dalam kotak putih diperluas */
+}
+
+/* 2. PERBESAR HEADING TABEL */
+.admin-product-table th {
+    font-size: 50px !important; /* Dari 14px ke 18px */
+    padding: 20px 15px !important;
+}
+
+/* 3. PERBESAR ISI TABEL */
+.admin-product-table td {
+    font-size: 60px !important; /* Teks umum jadi lebih besar */
+    padding: 20px 15px !important;
+}
+
+/* 5. PERBESAR GAMBAR */
+.admin-table-img {
+    width: 400px !important; /* Dari 70px ke 90px */
+    height: 550px !important; /* Dari 100px ke 130px */
+}
+
+/* 6. PERBESAR TOMBOL EDIT & HAPUS */
+.edit-btn, .delete-btn {
+    padding: 8px 20px !important;
+    font-size: 55px !important;
+}
+
+.add-new-btn {
+    font-size: 50px !important;
+    padding: 15px 30px !important;
+}
+/* TABEL RAPI */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* Agar sudutnya membulat */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-table thead {
+  background-color: #1e293b;
+  color: rgb(128, 191, 220);
+}
+
+.product-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.product-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  color: #334155;
+}
+
+/* UKURAN GAMBAR DI TABEL */
+.table-img {
+  width: 60px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(46, 93, 154, 0.1);
+}
+
+/* TOMBOL AKSI (EDIT & HAPUS) */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  background-color: #10b981; /* Hijau */
+  color: rgb(46, 90, 152);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #ef4444; /* Merah */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-btn:hover { background-color: #059669; }
+.delete-btn:hover { background-color: #dc2626; }
+
+.admin-page-container {
+    padding: 40px;
+    background-color: #60778d;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.admin-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-nav-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background: #64748b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* TABLE STYLING */
+.table-wrapper {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%; /* MEMASTIKAN LEBAR PENUH */
+}
+
+.admin-product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-product-table th {
+    background-color: #1e293b;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.admin-product-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+/* GAMBAR DI TABEL */
+.admin-table-img {
+    width: 70px; /* Ukuran gambar diperbesar */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.col-judul {
+    font-weight: 700;
+    font-size: 16px;
+    width: 40%; /* Judul dapat porsi lebar terbanyak */
+}
+
+.col-harga {
+    font-weight: 800;
+    color: #2563eb;
+}
+
+/* BUTTONS */
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn { color: #10b981; background: none; border: 1px solid #10b981; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.delete-btn { color: #ef4444; background: none; border: 1px solid #ef4444; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.add-new-btn { background: #2563eb; color: white; padding: 12px 24px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; }
+
+/* FORM TAMBAH */
+.add-form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #e2e8f0;
+}
+.admin-form { display: flex; flex-direction: column; gap: 15px; }
+.admin-form input { padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; }
+
+/* 1. KOTAK PEMBUNGKUS FORM */
+.add-form-container {
+    background: white !important;
+    padding: 80px !important;
+    border-radius: 30px !important;
+    margin: 0 auto 30px auto !important; /* Tengahkan form */
+    border: 1px solid #314560 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    max-width: 1200px !important; /* KUNCI: Biar gak melar selayar penuh */
+}
+
+.add-form-container h3 {
+    text-align: center !important;
+    color: #1e293b !important;
+    margin-bottom: 20px !important;
+    font-size: 60px !important;
+}
+
+/* 2. PENGATURAN INPUT (BIAR RAPI KE BAWAH) */
+.admin-form {
+    display: flex !important;
+    flex-direction: column !important; /* Berjejer ke bawah */
+    gap: 15px !important;
+}
+
+.admin-form input {
+    width: 100% !important;
+    padding: 30px 35px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    font-size: 40px !important;
+    transition: border-color 0.2s !important;
+}
+
+.admin-form input:focus {
+    outline: none !important;
+    border-color: #2563eb !important; /* Warna biru saat diklik */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* 3. TOMBOL SIMPAN & BATAL */
+.form-actions {
+    display: flex !important;
+    justify-content: center !important; /* Tombol di tengah */
+    gap: 10px !important;
+    margin-top: 10px !important;
+}
+
+.save-btn {
+    background-color: #10b981 !important; /* Hijau */
+    color: white !important;
+    padding: 20px 30px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    font-size: 40px !important;
+}
+
+.cancel-btn {
+    background-color: #ef4444 !important; /* Merah */
+    color: white !important;
+    padding: 10px 25px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+     font-size: 40px !important;
+}
+/* 1. MENAMBAHKAN GARIS PEMBATAS ANTAR BARIS */
+.admin-product-table tr {
+    /* Memberi garis bawah pada setiap baris buku */
+    border-bottom: 8px solid #092d5b !important; 
+    transition: background-color 0.2s !important;
+}
+
+/* 2. MEMBERI JARAK AGAR TIDAK MENEMPEL KE GARIS */
+.admin-product-table td {
+    padding: 25px 15px !important; /* Diperbesar supayar garisnya punya ruang */
+    vertical-align: middle !important;
+}
+
+/* 3. EFEK SOROT (HOVER) - OPSIONAL TAPI KEREN */
+/* Biar admin tahu baris mana yang sedang ditunjuk mouse */
+.admin-product-table tbody tr:hover {
+    background-color: #b9d4ed !important;
+}
+
+/* 4. MENGHILANGKAN GARIS DI BARIS TERAKHIR (AGAR RAPI) */
+.admin-product-table tbody tr:last-child {
+    border-bottom: none !important;
+}
+/* 1. PERBESAR CONTAINER NAVIGASI */
+.admin-nav-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 30px 40px !important; /* Tambah padding agar lebih tinggi */
+    margin-bottom: 40px !important;
+    background-color: #ffffff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+}
+
+/* 2. PERBESAR TOMBOL KEMBALI */
+.back-btn {
+    padding: 12px 25px !important; /* Ukuran tombol lebih besar */
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    background-color: #64748b !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: transform 0.2s !important;
+}
+
+.back-btn:hover {
+    transform: scale(1.05) !important; /* Efek membesar dikit saat di-hover */
+}
+
+/* 3. PERBESAR JUDUL "MANAJEMEN PRODUK" */
+.admin-nav-header h1 {
+    font-size: 48px !important; /* Ukuran teks diperbesar signifikan */
+    font-weight: 900 !important;
+    color: #1e293b !important;
+    letter-spacing: 2px !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+}
+
+/* 4. PERBESAR TEKS INFO ADMIN (Kanan) */
+.admin-user-info {
+    font-size: 38px !important; /* Teks lebih mudah dibaca */
+    font-weight: 600 !important;
+    color: #64748b !important;
+}
+
+.admin-user-info span {
+    color: #2563eb !important; /* Nama admin tetap biru cerah */
+    font-weight: 800 !important;
+}
+/* PAKSA TABEL PUNYA LEBAR TETAP */
+.admin-product-table {
+    width: 100% !important;
+    table-layout: fixed !important; /* INI KUNCI SEJAJAR */
+    border-collapse: collapse !important;
+}
+
+/* ATUR LEBAR MASING-MASING KOLOM */
+.col-img { width: 100px !important; text-align: center !important; }
+.col-judul { width: 35% !important; }
+.col-kategori { width: 15% !important; }
+.col-stok { width: 10% !important; font-weight: bold; color: #059669; } /* Hijau untuk stok */
+.col-harga { width: 15% !important; font-weight: 800; color: #2563eb; }
+.col-aksi { width: 150px !important; }
+
+/* PASTIKAN TEXT TIDAK MELEBER */
+.admin-product-table td {
+    padding: 20px 15px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+/* AGAR JUDUL BISA TURUN KE BAWAH KALAU PANJANG */
+.col-judul {
+    white-space: normal !important;
+    line-height: 1.4 !important;
+}
+
+/* 1. MEMBUAT SEMUA ISI TABEL DI TENAH SECARA VERTIKAL & HORIZONTAL */
+.admin-product-table th, 
+.admin-product-table td {
+    padding: 20px 15px !important;
+    text-align: center !important; /* Membuat teks di tengah secara horizontal */
+    vertical-align: middle !important; /* Membuat teks/gambar di tengah secara vertikal */
+}
+
+/* 2. KHUSUS UNTUK JUDUL: Tetap rata kiri biasanya lebih rapi, 
+   tapi jika ingin benar-benar di tengah gunakan ini: */
+.col-judul {
+    text-align: center !important; 
+    font-weight: 700 !important;
+    white-space: normal !important;
+}
+
+/* 3. MEMASTIKAN GAMBAR TIDAK MERUSAK POSISI TENGAH */
+.admin-table-img {
+    display: block !important;
+    margin: 0 auto !important; /* Tengahkan gambar dalam kolomnya */
+    width: 400px !important;
+    height: 700px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
+
+/* 4. SEJAJARKAN TOMBOL AKSI DI TENGAH */
+.action-btns {
+    display: flex !important;
+    justify-content: center !important; /* Tombol Edit/Hapus ke tengah */
+    gap: 10px !important;
+}
+
+/* 5. HEADER TABEL (TH) JUGA HARUS DI TENGAH */
+.admin-product-table th {
+    text-align: center !important;
+    background-color: #5c81bd !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}

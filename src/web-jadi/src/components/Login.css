@@ -1,0 +1,153 @@
+/* CONTAINER UTAMA - BAGI DUA SAMA RATA */
+.login-split-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* SISI KIRI - 50% LAYAR */
+.login-visual-panel {
+  flex: 1; /* Dibagi rata 1:1 */
+  background: linear-gradient(135deg, #3754d4 0%, #1e3a8a 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.giant-book-icon {
+  font-size: 200px; /* Sangat Besar */
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brand-tagline {
+  font-size: 38px;
+  color: #d1e4ed;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* SISI KANAN - 50% LAYAR (BIRU PASTEL) */
+.login-form-panel {
+  flex: 1; /* Dibagi rata 1:1 */
+  background: #89b6ea; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px; /* Padding besar agar form tidak mepet layar */
+}
+
+.form-content-wrapper {
+  width: 100%; /* Memenuhi lebar panel kanan */
+  max-width: 800px; /* Batas maksimal agar tidak terlalu melar di layar ultra wide */
+}
+
+.form-header h2 {
+  font-size: 120px; /* SIGN IN RAKSASA */
+  color: #0f172a;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: -5px;
+}
+
+.form-header p {
+  font-size: 38px;
+  color: #475569;
+  margin-bottom: 60px;
+}
+
+/* INPUT SECTION - BUAT LEBAR DAN TEBAL */
+.modern-input-group {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.modern-input-group label {
+  display: block;
+  font-size: 45px; /* Label Username/Password */
+  font-weight: 900;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.modern-input-group input {
+  width: 100%; /* Mengisi seluruh ruang yang tersedia */
+  padding: 25px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 10px solid #cbd5e1; /* Garis bawah super tebal */
+  font-size: 40px; /* Teks ketikan raksasa */
+  color: #0f172a;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.modern-input-group input:focus {
+  border-bottom-color: #2563eb;
+}
+
+/* TOMBOL MASUK - PENUHI LEBAR */
+.modern-login-btn {
+  width: 100%; /* Tombol selebar input */
+  padding: 40px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 35px; /* Teks tombol sangat besar */
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.3);
+  margin-top: 30px;
+}
+
+.modern-login-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+
+/* Bagian pembungkus teks di bawah tombol login */
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Memperbesar tulisan "Belum punya akun?" */
+.auth-footer p {
+    font-size: 35px;    /* Ukuran teks biasa (tambah jika kurang besar) */
+    color: #444;        /* Warna teks */
+    font-weight: 500;
+}
+
+/* Memperbesar tulisan Link "Daftar Akun Petugas" atau "Pengguna Baru" */
+.auth-footer a {
+    font-size: 35px;    /* Samakan ukuran agar sejajar */
+    font-weight: 800;   /* Buat sangat tebal agar menonjol */
+    color: #112867;     /* Warna biru tegas */
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #2563eb;     /* Warna berubah saat kursor di atasnya */
+}

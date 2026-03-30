@@ -1,0 +1,35 @@
+{
+    "name": "toko-buku-api",
+    "version": "1.0.0",
+    "description": "API Server untuk Proyek Akhir Toko Buku (Express.js, PostgreSQL, JWT)",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node ./app.js",
+        "dev": "nodemon ./app.js"
+    },
+    "keywords": [
+        "express",
+        "postgresql",
+        "jwt",
+        "smk"
+    ],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.13.5",
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "moment-timezone": "^0.6.0",
+        "mongoose": "^8.19.4",
+        "pg": "^8.16.3",
+        "react-router-dom": "^7.13.1",
+        "uuid": "^13.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}

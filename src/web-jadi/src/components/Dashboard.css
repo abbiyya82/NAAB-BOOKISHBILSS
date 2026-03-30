@@ -1,0 +1,279 @@
+/* 1. PERBAIKAN BLOK BIRU (HEADER) */
+.dashboard-header
+{
+  display: flex !important;
+  justify-content: space-between !important; /* Nama di kiri, Tombol di kanan */
+  align-items: center !important;
+  background-color: #1e293b !important; 
+  padding: 70px 5% !important;
+  width: 100% !important;
+  min-height: 80px !important;
+  margin-bottom: 40px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* 2. TEKS TOKO BUKU */
+.header-info h1 {
+  color: #ffffff !important;
+  font-size: 85px !important;
+  font-weight: 900 !important;
+  margin: 0 !important;
+  text-transform: uppercase !important;
+}
+
+/* 3. WADAH TOMBOL (AGAR SEJAJAR & TIDAK TUMPUK) */
+.header-actions {
+  display: flex !important;
+  flex-direction: row !important; /* Memaksa satu baris ke samping */
+  align-items: center !important;
+  gap: 20px !important; /* Jarak antar tombol */
+}
+
+/* 4. TOMBOL KELOLA PRODUK */
+.admin-nav-btn {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 33px !important;
+  font-weight: 800 !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 47px !important;
+  white-space: nowrap !important; /* Supaya teks tidak pecah ke bawah */
+}
+
+/* 5. ICON KERANJANG */
+.cart-widget {
+  font-size: 90px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  color: white !important;
+}
+
+/* 6. TOMBOL SIGN OUT */
+.cart-badge {
+  background-color: #ef4444 !important;
+  color: white !important;
+  font-size: 45px !important;
+  font-weight: bold !important;
+  padding: 3px 8px !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: -8px !important;
+  right: -12px !important;
+}
+.logout-button {
+  background-color: #dc2626 !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 33px !important;
+  font-weight: 800 !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 55px !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 50px 0; /* Hapus padding samping agar grid bisa melar */
+  background-color: #6a98c6;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* GRID: KUNCI UTAMA LEBAR */
+.book-grid {
+  display: grid !important;
+  /* Paksa 2 atau 3 kolom saja agar kartu PUNYA RUANG LEBAR */
+  grid-template-columns: repeat(4, 1fr) !important; 
+  gap: 30px;
+  width: 95%; /* Memberi margin kanan kiri seperti blok putih */
+  margin: 0 auto;
+}
+
+/* KARTU BUKU (Harus lebar mengikuti Grid) */
+.book-card {
+  background: white !important;
+  border-radius: 20px !important;
+  padding: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important; /* WAJIB: Agar kartu selebar kolom grid */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+}
+
+/* GAMBAR BUKU: Harus Tinggi & Lebar */
+.book-image {
+  width: 100% !important;
+  margin-bottom: 30px;
+}
+
+.book-image img {
+  width: 100% !important;
+  height: 1270px !important; /* Dibuat tinggi agar gagah */
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* TEKS */
+.book-title {
+  font-size: 60px !important; /* Diperbesar agar seimbang */
+  font-weight: 800 !important;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+
+/* TOMBOL ORDER */
+.order-button {
+  width: 100% !important;
+  padding: 20px !important;
+  background-color: #1e3a8a !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 50px !important;
+  font-weight: 800 !important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* --- SISANYA (HEADER & FILTER) --- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7a8dab;
+  padding: 30px 3%;
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto 50px;
+  color: white;
+}
+/* 1. TEKS KATEGORI (Fiksi & Non-Fiksi) */
+.book-badge {
+  display: inline-block !important;
+  font-size: 43px !important;
+  font-weight: 700 !important;
+  color: #3b82f6 !important; /* Warna biru agar senada dengan tombol */
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 10px !important;
+  background-color: #eff6ff !important; /* Background biru sangat muda */
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+}
+
+/* 2. TEKS ISBN */
+.book-isbn {
+  display: block !important;
+  font-size: 40px !important;
+  color: #64748b !important; /* Warna abu-abu agar tidak terlalu mencolok */
+  margin-bottom: 15px !important;
+  font-family: 'Courier New', Courier, monospace !important; /* Gaya khas kode */
+}
+
+/* 3. AREA INFO HARGA & STOK (AGAR TIDAK MEPET) */
+.book-info-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important; /* Jarak antara Harga dan Stok */
+  margin-bottom: 20px !important;
+  padding: 10px 0 !important;
+  border-top: 1px solid #f1f5f9 !important; /* Garis tipis pembatas atas */
+}
+
+/* 4. TEKS PRICE & STOK (SEJAJAR & SERAGAM) */
+.book-info-row {
+  display: flex !important;
+  flex-direction: row !important; /* Paksa satu baris ke samping */
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important; /* Jarak antara Harga dan Stok */
+  margin-bottom: 25px !important;
+  width: 100% !important;
+}
+
+.book-price {
+  /* Ukuran diturunkan agar muat sejajar, tapi tetap tebal */
+  font-size: 60px !important; 
+  font-weight: 900 !important;
+  color: #1e40af !important;
+  margin: 0 !important; /* Hapus margin agar tidak merusak baris */
+  line-height: 1 !important;
+}
+
+.book-stock {
+  /* Samakan ukuran font dengan harga agar sejajar satu ukuran */
+  font-size: 60px !important; 
+  color: #1e293b !important;
+  background-color: #f8fafc !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important; /* Cegah teks "Stok" turun ke bawah */
+}
+
+.book-stock b {
+  color: #059669 !important;
+  font-size: 60px !important; /* Samakan dengan teks Stok */
+  margin-left: 5px !important;
+}
+
+/* 5. PEMISAH GARIS VERTIKAL (|) */
+.price-separator {
+  color: #cbd5e1 !important;
+  font-weight: 300 !important;
+}
+/* CONTAINER FILTER */
+.filter-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  padding: 20px 0 !important;
+  margin: 20px 0 !important; /* Memberi ruang agar tidak mepet header/grid */
+  width: 100% !important;
+  position: relative !important;
+  z-index: 10 !important; /* Memastikan tombol di atas elemen lain */
+}
+
+/* TOMBOL FILTER */
+.filter-btn {
+  padding: 20px 70px !important;
+  border-radius: 30px !important;
+  border: 2px solid #e2e8f0 !important;
+  background-color: white !important;
+  color: #94a6c3 !important;
+  font-weight: 700 !important;
+  font-size: 55px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+}
+
+/* EFEK SAAT TOMBOL AKTIF/DIKLIK */
+.filter-btn.active {
+  background-color: #7a9dd5 !important;
+  color: white !important;
+  border-color: #1e293b !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* EFEK HOVER (SAAT KURSOR DI ATAS TOMBOL) */
+.filter-btn:hover:not(.active) {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  transform: translateY(-1px) !important;
+}
