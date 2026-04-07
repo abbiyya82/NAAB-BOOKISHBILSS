@@ -1,52 +1,77 @@
-====================================================================
-RINGKASAN PROYEK:API TOKO (SISTEM MANAJEMEN KASIR)
-»»———-　　———-««
-Proyek ini adalah pengembangan API Server menggunakan Express.js untuk mendukung operasional toko (manajemen user, produk, kategori, dan transaksi).
+# 🛒 API Toko (Sistem Manajemen Kasir)
 
+Proyek ini adalah pengembangan **API Server** menggunakan **Express.js** untuk mendukung operasional toko secara digital, mulai dari manajemen pengguna hingga pencatatan transaksi penjualan secara real-time.
 
-✎ᝰ. 📚*STATUS IMPLEMENTASI MODUL*✎ᝰ. 📚
-1.Koneksi Database (src/config/db.js): Selesai.Catatan: Logika koneksi database saat ini dinonaktifkan di Controller.
-2.Routing & Struktur: Selesai.Catatan: Semua jalur API sudah didefinisikan.
-3.Controller Logic (CRUD): Placeholder (501 Not Implemented).Catatan: Semua fungsi mengembalikan respons status 501.
-4.Middleware Autentikasi: Fungsional.Catatan: Logika verifikasi token (JWT, isAdmin, isCashierOrAdmin) sudah terimplementasi.
+---
 
+## 🎯 Tujuan Proyek
+* **Digitalisasi Operasional:** Menggantikan pencatatan manual menjadi sistem database yang terpusat.
+* **Efisiensi Kasir:** Mempercepat proses transaksi dan manajemen stok produk.
+* **Keamanan Data:** Memastikan akses data hanya bisa dilakukan oleh pihak berwenang (Admin/Kasir) menggunakan sistem token.
+* **Skalabilitas:** Membangun fondasi sistem yang mudah dikembangkan di masa depan (seperti integrasi ke aplikasi Mobile atau Web).
 
-💡📝💡📝*DESAIN DATABASE (5 Tabel Utama)*💡📝💡📝
-1.USERS: Data Admin dan Kasir.
-2.CATEGORIES: Data master kategori produk.
-3.PRODUCTS: Data master produk dan stok. (Relasi: CATEGORIES)
-4.TRANSACTIONS: Header transaksi penjualan. (Relasi: USERS)
-5.TRANSACTION_ITEMS: Detail item transaksi. (Relasi: TRANSACTIONS, PRODUCTS)
+---
 
+## 🛠️ Persyaratan Sistem (Prerequisites)
+Untuk menjalankan proyek ini, Anda membutuhkan:
+* **Node.js** (Versi 14 atau terbaru)
+* **NPM** (Node Package Manager)
+* **Database MySQL/PostgreSQL** (Sesuai konfigurasi `db.js`)
+* **Text Editor** (Sangat disarankan menggunakan VS Code)
+* **Postman** atau **Insomnia** (Untuk pengujian API)
 
-★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶
-★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶     DOKUMENTASI ENDPOINT API (Base URL: /api)    ★ ☆ ✮ ✶ ✷ ✵ ✧ ⋆ ☄︎ ⁕ ✶
-A. MODUL AUTENTIKASI (/api/auth)
--POST /login: Otentikasi user dan menghasilkan token. (Akses: Publik)
--POST /refresh-token: Memperbarui Access Token. (Akses: Publik)
--POST /logout: Menghapus token dan mengakhiri sesi. (Akses: User Terautentikasi)
+---
 
-B. MODUL MANAJEMEN USER (/api/users)
--POST /register: Mendaftarkan user baru (Admin/Kasir). (Akses: Admin)
--PUT /deactivate-user/:id: Mengubah status aktif user. (Akses: Admin)
--GET /profile: Mengambil data profil user yang sedang login. (Akses: User Terautentikasi)
+## 📊 Status Implementasi Modul
+| Modul | Status | Catatan |
+| :--- | :--- | :--- |
+| **Koneksi Database** | ✅ Selesai | Logika koneksi saat ini dinonaktifkan di Controller. |
+| **Routing & Struktur** | ✅ Selesai | Semua jalur API sudah didefinisikan. |
+| **Controller Logic** | ⚠️ Placeholder | Status 501 (Not Implemented). |
+| **Middleware Auth** | ✅ Fungsional | Terimplementasi JWT, `isAdmin`, dan `isCashierOrAdmin`. |
 
-C. MODUL MANAJEMEN KATEGORI (/api/categories)
--GET /: Mengambil semua kategori. (Akses: Publik)
--GET /:id: Mengambil kategori berdasarkan ID. (Akses: Publik)
--POST /: Membuat kategori baru. (Akses: Admin)PUT /:id: Memperbarui data kategori. (Akses: Admin)
--DELETE /:id: Menghapus kategori. (Akses: Admin)
+---
 
-D. MODUL MANAJEMEN PRODUK (/api/products)
--GET /: Mengambil semua produk. (Akses: Publik)
--GET /:id: Mengambil produk berdasarkan ID. (Akses: Publik)
--POST /: Membuat produk baru. (Akses: Admin)
--PUT /:id: Memperbarui data produk. (Akses: Admin)
--DELETE /:id: Menghapus produk. (Akses: Admin)
+## 🗄️ Desain Database
+Sistem ini menggunakan 5 tabel utama yang saling berelasi:
+1.  **USERS**: Data kredensial Admin dan Kasir.
+2.  **CATEGORIES**: Master data kategori produk.
+3.  **PRODUCTS**: Data master produk, harga, dan stok (Relasi: *Categories*).
+4.  **TRANSACTIONS**: Header transaksi penjualan (Relasi: *Users*).
+5.  **TRANSACTION_ITEMS**: Detail item per transaksi (Relasi: *Transactions* & *Products*).
 
-E. MODUL TRANSAKSI (/api/transactions)
--POST /: Membuat transaksi penjualan baru. (Akses: Kasir atau Admin)
--GET /: Mengambil semua transaksi. (Akses: Admin)
--GET /:id: Mengambil detail transaksi berdasarkan ID. (Akses: Kasir atau Admin)
--PUT /:id: Memperbarui transaksi (misal: membatalkan). (Akses: Admin)
--DELETE /:id: Menghapus transaksi. (Akses: Admin)
+---
+
+## 🚀 Dokumentasi Endpoint API (Base URL: `/api`)
+
+### A. Autentikasi (`/api/auth`)
+| Method | Endpoint | Akses | Deskripsi |
+| :--- | :--- | :--- | :--- |
+| POST | `/login` | Publik | Otentikasi user & generate token. |
+| POST | `/refresh-token` | Publik | Memperbarui Access Token. |
+| POST | `/logout` | Authenticated | Mengakhiri sesi user. |
+
+### B. Manajemen User (`/api/users`)
+| Method | Endpoint | Akses | Deskripsi |
+| :--- | :--- | :--- | :--- |
+| POST | `/register` | Admin | Mendaftarkan user baru. |
+| PUT | `/deactivate-user/:id` | Admin | Menonaktifkan status user. |
+| GET | `/profile` | Authenticated | Mengambil profil user login. |
+
+### C. Manajemen Kategori & Produk
+| Modul | Method | Endpoint | Akses |
+| :--- | :--- | :--- | :--- |
+| **Category** | GET | `/categories` | Publik |
+| **Category** | POST/PUT/DEL | `/categories/:id` | Admin |
+| **Product** | GET | `/products` | Publik |
+| **Product** | POST/PUT/DEL | `/products/:id` | Admin |
+
+### D. Transaksi (`/api/transactions`)
+| Method | Endpoint | Akses | Deskripsi |
+| :--- | :--- | :--- | :--- |
+| POST | `/` | Kasir/Admin | Membuat transaksi baru. |
+| GET | `/` | Admin | Melihat semua riwayat transaksi. |
+| GET | `/:id` | Kasir/Admin | Melihat detail transaksi spesifik. |
+| PUT/DEL | `/:id` | Admin | Update/Hapus data transaksi. |
+
+---
